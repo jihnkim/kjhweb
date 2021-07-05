@@ -1,0 +1,13 @@
+.jhn_header_logo{
+    margin: 2rem 0;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.jhn_header_btn{
+    margin-bottom: 2rem;
+}
+
+.jhn_footer_btn{
+    font-size: .8rem;
+    margin: 1.5rem;
+}
