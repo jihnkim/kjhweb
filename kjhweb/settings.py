@@ -13,6 +13,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.urls import reverse_lazy
+
 BASE_DIR = Path(__file__).resolve().parent.parent # 프로젝트의 경로를 의미(세팅즈 파일의 부모폴더, kjh 폴더의 부모인 프로젝트 폴더)
 
 local_env = open(os.path.join(BASE_DIR, '.env')) # BASE_DIR과 .env 경로를 연결
@@ -142,3 +144,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 로그인 성공 시 / 로그아웃 시 이동 링크 설정
+LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
+
+LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')

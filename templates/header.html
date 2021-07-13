@@ -1,12 +1,20 @@
 <div style="text-align: center">
     {#  2rem, 0 >> 상하의 마진 값, 좌우의 마진 값  #}
     <div class="jhn_header_logo">
-        <h1>JihnKims World</h1>
+        <h1 style="font-family: 'Gochi Hand', cursive">MEOW!</h1>
     </div>
     <div class="jhn_header_btn">
-        <span>nav1</span>
-        <span>nav2</span>
-        <span>nav3</span>
-        <span>nav4</span>
+        <span>nav1</span> |
+        <span>nav2</span> |
+        <span>
+            <a href="{% url 'accountapp:login' %}">
+                Login
+            </a>
+        </span>|
+        <span>
+            <a href="{% url 'accountapp:create' %}">
+                Join
+            </a>
+        </span>
     </div>
 </div>
