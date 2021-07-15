@@ -1,7 +1,14 @@
 0715
 1. 로그인 되어있을 때 조건문을 통해 다른 페이지 요청
-(if not user.is_authenticated('...:...'))
+!! (if not user.is_authenticated('...:...'))
 2. bootstrap4 공식 docs에서 installation, quick start
+!! pip install django-bootstrap4
+!! settings.py 에 bootstrap4 추가
 3. bootstrap 로드 후 html 문서 수정(create, login)
 !! css 파일 클래스 추가 후 변경 후 브라우저가 변하지 않는다면 캐쉬 문제
-
+4. 네이버 글꼴 추가
+!! static >> fonts 하위 폴더 생성 >> otf파일 추가
+!! head에 style 태그 추가
+!! body 태그에 font-family 변경 나눔스퀘어
+5. 세팅즈에서 랭귀지모드 변경 (한글을 원한다면)
+!! setting >> lan-mode : 'ko-kr'

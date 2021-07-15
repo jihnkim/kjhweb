@@ -5,14 +5,14 @@
 
     <div class="text-center mw-500 m-auto">
         <div class="m-5">
-            <h4 style="font-family: 'Gochi Hand', cursive;">Login</h4>
+            <h3 style="font-family: 'Gochi Hand', cursive;">Login</h3>
         </div>
         <div>
             {#  로그인 페이지로 요청 보냄  #}
             <form action="{% url 'accountapp:login' %}" method="post">
                 {% csrf_token %}
                 {% bootstrap_form form %}
-                <div class="m-5">
+                <div style="font-family: 'Gochi Hand', cursive" class="m-5">
                     <input type="submit" value="meow"
                            class="btn btn-dark rounded-pill px-5">
                 </div>
