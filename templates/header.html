@@ -6,6 +6,9 @@
     <div class="jhn_header_btn">
         <span>nav1</span> |
         <span>nav2</span> |
+
+        {% if not user.is_authenticated %}
+
         <span>
             <a href="{% url 'accountapp:login' %}">
                 Login
@@ -16,5 +19,13 @@
                 Join
             </a>
         </span>
+
+        {% else %}
+        <span>
+            <a href="{% url 'accountapp:logout' %}">
+                logout
+            </a>
+        </span>
+        {% endif %}
     </div>
 </div>

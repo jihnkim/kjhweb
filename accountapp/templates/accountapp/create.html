@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
+{# Load the tag library #}
+{% load bootstrap4 %}
 
 {% block content %}
-
-    <div class="text-center">
+{# CSS 클래스 변경하고 추가했는데 디자인 변경이 안되면 브라우저 캐쉬 문제 #}
+{# 브라우저 개발자 탭에서 브라우저 캐쉬 disable check #}
+    <div class="text-center mw-500 m-auto">
         <div class="m-5">
-            <h4>Sign up</h4>
+            <h4>Join us, MEOW</h4>
         </div>
         <div>
             <form action="{% url 'accountapp:create' %}" method="post">
                 {% csrf_token %}
-                {{ form }}
+                {% bootstrap_form form %}
                 <div class="m-5">
-                    <input type="submit"
+                    <input type="submit" value="meow!"
                            class="btn btn-dark rounded-pill px-5">
                 </div>
 

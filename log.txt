@@ -1,0 +1,7 @@
+0715
+1. 로그인 되어있을 때 조건문을 통해 다른 페이지 요청
+(if not user.is_authenticated('...:...'))
+2. bootstrap4 공식 docs에서 installation, quick start
+3. bootstrap 로드 후 html 문서 수정(create, login)
+!! css 파일 클래스 추가 후 변경 후 브라우저가 변하지 않는다면 캐쉬 문제
+
