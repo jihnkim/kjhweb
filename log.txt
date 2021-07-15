@@ -12,3 +12,17 @@
 !! body 태그에 font-family 변경 나눔스퀘어
 5. 세팅즈에서 랭귀지모드 변경 (한글을 원한다면)
 !! setting >> lan-mode : 'ko-kr'
+
+CRUD 에서 Login View 까지 완성
+Detail view 제작 (Read View)
+>>요청을보내는 유저 , 보려는 유저<<
+유저 고유 키값을 서버에서 확인하고
+해당 유저 정보를 HTML 문서상에 출력
+
+6. view >> detailview add >> url에 path 추가 >> html 파일생성
+!! view 에서 detailview 클래스 생성
+!! path 추가시 클래스 기반 view는 .as_view()필수입력
+
+7. header에서 로그인 했을 때 마이페이지 탭 추가
+!! detail.html
+
