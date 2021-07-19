@@ -41,4 +41,6 @@ CRUD에서 Update view 제작
 4. detail.html 수정
 !! mypage에 회원정보 수정 버튼 추가
 
+5. Delete 뷰 생성 방법은 동일.
+
 
