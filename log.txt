@@ -1,4 +1,5 @@
 0715
+## 계정생성 이후 (Sign up -- create view)
 1. 로그인 되어있을 때 조건문을 통해 다른 페이지 요청
 !! (if not user.is_authenticated('...:...'))
 2. bootstrap4 공식 docs에서 installation, quick start
@@ -16,8 +17,9 @@
 CRUD 에서 Login View 까지 완성
 Detail view 제작 (Read View)
 >>요청을보내는 유저 , 보려는 유저<<
-유저 고유 키값을 서버에서 확인하고
+유저 고유 키값(pk)을 서버에서 확인하고
 해당 유저 정보를 HTML 문서상에 출력
+!! context_object_name을 통해 html 상에서 정보
 
 6. view >> detailview add >> url에 path 추가 >> html 파일생성
 !! view 에서 detailview 클래스 생성
@@ -25,4 +27,18 @@ Detail view 제작 (Read View)
 
 7. header에서 로그인 했을 때 마이페이지 탭 추가
 !! detail.html
+-----------------------------------------------------------------
+
+0719
+CRUD에서 Update view 제작
+1. view.py에서 class 생성 (UpdateView)
+!! User 객체 그대로 사용
+!! context_object_name은 target_user
+2. url에 path 추가
+!! url에서 appname : name 에서 name에 들어가는 값이 우리가 지정한 name 값
+3. update.html 제작
+!! 틀은 create.html과 유사
+4. detail.html 수정
+!! mypage에 회원정보 수정 버튼 추가
+
 
