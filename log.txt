@@ -49,8 +49,38 @@ CRUD에서 Update view 제작
 -----------------------------------------------------------------
 
 0720
+기존 부분에서 엉성한 부분 수정
 1. detail.html에서 사용자 아이디 바꾸는 부분 비활성화
 !! view.py에서 UserCreationForm이 기존 폼 >> ctrl+B로 확인
 !! 상속을 통해 form을 커스터마이징 >>forms.py에서 생성
 !! 부모클래스와 동일한 클래스 생성 >> super()이용
 !! 항상 서버를 만든다고 생각하고 튼튼한 서버를 구축해야한다.
+
+**
+Get : inquiry
+Post : create, update
+**
+
+header에서 조건문 분기한것 처럼
+2. user.is_authenticated를 통해 로그인이 안됐을경우 login 페이지로 이동
+!! helloworld def 수정 후 views.py에서 조건문 분기를 추가 후 else 리다이렉트
+!! update, Delete 클래스도 마찬가지로 바꿈
+
+3. 하지만 로그인이 되어있는것만 확인했음
+!! 즉, 4번유저로 로그인을하면 5번유저 디테일도 들어갈 수 있음
+!! 위에 작성한 조건에 self.get_object == request.user를 and로 연결
+!! 이번엔 HttpResponseForbidden을 리턴
+
+4. decorator는 함수를 인자로 받음
+!! 인자로 받은 함수 앞 뒤를 꾸며줌
+-----------------------------------------------------------------
+
+0722
+1. view.py 첫번째 user.is)authentic ... 지우고 deco 생성
+!! 장고에서 제공해주는 login_required 이용
+!! 장고에서 기본적으로 /accounts/login/ 이 default이지만
+   경로 변경이 필요할 시(login_url = reverse_lazy('account:login'))사용
+
+2. 메소드에서(클래스의 함수) 데코를 적용할 경우
+!! 데코를 변환을 하거나 애초에 메소드를 위한 데코를 만들어야함
+!! 하지만 장고에서 이것도 제공해줌 method_decorator
