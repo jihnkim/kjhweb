@@ -82,5 +82,16 @@ header에서 조건문 분기한것 처럼
    경로 변경이 필요할 시(login_url = reverse_lazy('account:login'))사용
 
 2. 메소드에서(클래스의 함수) 데코를 적용할 경우
+!! 로그인이 되었는지 확인 하는 데코
 !! 데코를 변환을 하거나 애초에 메소드를 위한 데코를 만들어야함
-!! 하지만 장고에서 이것도 제공해줌 method_decorator
+!! 하지만 장고에서 이것도 제공해줌 method_decorator(사용할데코)
+!! 로그인이 되었을 때 다른 아이디의 update, delete 페이지를 막는 데코도 따로 작성
+!! 추가적으로 데코레이터들을 리스트에 넣어서 간단하게 표현가능함
+
+3. admin 계정 생성
+!! python manage.py creatsuperuser 터미널에 입력
+!! superuser을 DB에서 확인
+
+4. 프로필 생성
+!! setting.py 에서 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+!! Media 역시 동일하게 생성하고 디렉토리 수정
