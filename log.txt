@@ -113,4 +113,12 @@ header에서 조건문 분기한것 처럼
 !! user 객체의 OneToOneField에서 on_delete 옵션의 cascade(종속) 설정
 !! image, nickname, message 객체 생성
 !! 다작성했으면 migration 작업 필수 !
-!! makemigrations, migrate
+!! pip install pillow 해야함 (image를 다루기 때문)
+!! ** 모델을 변경할 때 마다 터미널에서
+   makemigrations(장고가 모델변경을 감지하고 DB 스키마에 변화를 적용하는 방법), migrate
+!! 완료 후 DB에 프로필 db 확인
+
+3. form 만들기
+!! Meta 정보 >> form이 어떻게 작성되는 지 외부적인 정보를 담음
+!! forms.py 생성 후 field에 image, nickname, message 입력
+!! user의 경우는 서버에서 직접 관리(요청을 보낸 유저 확인)
