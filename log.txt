@@ -122,3 +122,10 @@ header에서 조건문 분기한것 처럼
 !! Meta 정보 >> form이 어떻게 작성되는 지 외부적인 정보를 담음
 !! forms.py 생성 후 field에 image, nickname, message 입력
 !! user의 경우는 서버에서 직접 관리(요청을 보낸 유저 확인)
+
+4. view 만들기
+!! CBV(클래스 기반 뷰)생성
+!! urls 에서 path 추가
+
+5. templates 만들기
+!! templates디렉토리 하위 profileapp 디렉토리 생성
