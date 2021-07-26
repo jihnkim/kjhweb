@@ -10,7 +10,9 @@
             <h3 style="font-family: 'Gochi Hand', cursive">Profile</h3>
         </div>
         <div>
-            <form action="{% url 'profileapp:create' %}" method="post">
+            <form action="{% url 'profileapp:create' %}"
+                  enctype="multipart/form-data"
+                  method="post">
                 {% csrf_token %}
                 {% bootstrap_form form %}
                 <div style="font-family: 'Gochi Hand', cursive" class="m-5">

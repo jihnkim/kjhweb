@@ -129,3 +129,6 @@ header에서 조건문 분기한것 처럼
 
 5. templates 만들기
 !! templates디렉토리 하위 profileapp 디렉토리 생성
+!! create.html 생성 후 accountapp의 create복붙 후 경로 수정
+!! create.html 에 form action 에서 enctype설정
+   파일을 보낼 수 있게 해주는 속성임
