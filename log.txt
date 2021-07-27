@@ -130,5 +130,18 @@ header에서 조건문 분기한것 처럼
 5. templates 만들기
 !! templates디렉토리 하위 profileapp 디렉토리 생성
 !! create.html 생성 후 accountapp의 create복붙 후 경로 수정
-!! create.html 에 form action 에서 enctype설정
+!! create.html 에 form action 에서 enctype설정(인코딩타입)
    파일을 보낼 수 있게 해주는 속성임
+-----------------------------------------------------------------
+
+0727
+1. profile/create 페이지에서 양식 제출시 무결성오류 해결
+!! 폼에서 3개를 입력받게 했는데 실제로 모델엔 4개임
+!! 즉 user 설정이 필요함 하지만 user까지 입력 받게한다면 착한 요청만 있지는 않을 것임
+!! 기존 모델의 검증이후에 추가적으로 검증이 필요할 때,
+!! view.py에서 profilecreateview 이하에 form_valid 추가
+!! form.instance.user 가 요청을 보내는 유저임을 알려주는 구문 추가
+!! ** DB에는 이미지가 저장되지 않음
+   >> 메인 앱에서 미디어들이 어디에 저장 될 지 설정 해놨었음
+   >> profile 앱 model.py에 image = models.ImageField(upload_to='profile/',
+   라는 설정으로 인해 profile/ 카테고리가 생성됨
