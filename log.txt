@@ -154,3 +154,8 @@ header에서 조건문 분기한것 처럼
    >> 메인앱 url에서 static 메소드 추가
 !! 사진이 너무 크니까 조절하자 class="profile_image" 생성
    >> 이후 base.css 에서 수정하자
+
+3. updateview 생성
+!! 기존 패턴과동일
+   >>view 생성 > 라우터 연결(path 추가 시 pk키 입력)> html 생성
+   >>edit anchor tag도 detail 페이지에 추가
