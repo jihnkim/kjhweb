@@ -145,3 +145,12 @@ header에서 조건문 분기한것 처럼
    >> 메인 앱에서 미디어들이 어디에 저장 될 지 설정 해놨었음
    >> profile 앱 model.py에 image = models.ImageField(upload_to='profile/',
    라는 설정으로 인해 profile/ 카테고리가 생성됨
+
+2. account의 detail을 꾸며야함
+!! detail.html에서 자기가 변경한 닉네임, 메시지 등을 보이게 함
+!! profile.nickname 이렇게 어떻게 불러왔나?
+   >> profileapp model.py에서 related_name에 profile이라 설정했었음
+!! 이미지 소스를 입력했지만 제대로 불러오지 못함?
+   >> 메인앱 url에서 static 메소드 추가
+!! 사진이 너무 크니까 조절하자 class="profile_image" 생성
+   >> 이후 base.css 에서 수정하자
