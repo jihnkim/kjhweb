@@ -159,3 +159,22 @@ header에서 조건문 분기한것 처럼
 !! 기존 패턴과동일
    >>view 생성 > 라우터 연결(path 추가 시 pk키 입력)> html 생성
    >>edit anchor tag도 detail 페이지에 추가
+
+-----------------------------------------------------------------
+
+0729
+1. 어카운트 디테일>> 에디트 페이지 로그아웃 된 상태에서 보임
+!! if 문 추가
+
+2. 동적 (pk 값을 받았을 때), 자신의 프로필로 돌아가게 설정하는 방법
+!! 기존 profile update view 에서 success url 지우고 메서드 생성
+!! self.object 는 target_profile 과 같다고 보면 됨 user는 프로필에 연결된 유저
+!! accountapp view에 update 클래스에도 메서드 오버라이딩 (def get_suc ...)
+   accountapp의 클래스에서 suc 메서드의 kwargs 경우는 object.pk 만 써도 ㄱㅊ
+
+3. account app 처럼 인증과정 생성 (decorator 사용)
+!! @method_decorator() 사용하여 profile creatview 꾸밈
+!! update view는 decorator 직접 제작  def decorated(request, *args, **kwargs):
+!! DB에 접근할 떄 해당 모델의 클래스에 접근 Profile.objects.get(pk=kwargs['pk'])
+!! 완려되면 데코레이터 클래스위에 작성
+
