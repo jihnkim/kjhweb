@@ -185,3 +185,10 @@ header에서 조건문 분기한것 처럼
 !! 추가적으로 클래스 생성해서 추가수정
    .round_button:hover 는 아이콘 위에 커서 올릴 때 색변화
 !! 기존 date.join 지우고 update info, quit 버튼으로 변경
+
+5. article 작성
+!! Magic grid 검색 -- 확인
+!! 터미널에서 startapp articleapp
+   항상 앱만들고 메인앱 인스톨앱 세팅, url path 추가
+   article app에 urls.py 생성
+
