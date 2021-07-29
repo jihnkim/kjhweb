@@ -175,6 +175,13 @@ header에서 조건문 분기한것 처럼
 3. account app 처럼 인증과정 생성 (decorator 사용)
 !! @method_decorator() 사용하여 profile creatview 꾸밈
 !! update view는 decorator 직접 제작  def decorated(request, *args, **kwargs):
+   def get(): 사용하여 매개변수 컨닝가능
 !! DB에 접근할 떄 해당 모델의 클래스에 접근 Profile.objects.get(pk=kwargs['pk'])
 !! 완려되면 데코레이터 클래스위에 작성
 
+4. Edit, info update 등 버튼 디자인 해보귀
+!! material icons 검색 >> github >> using font 태그 헤드에 추가
+!! detail html 에서 class = "material-icons" 추가
+!! 추가적으로 클래스 생성해서 추가수정
+   .round_button:hover 는 아이콘 위에 커서 올릴 때 색변화
+!! 기존 date.join 지우고 update info, quit 버튼으로 변경

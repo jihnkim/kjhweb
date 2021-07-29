@@ -23,3 +23,15 @@
     border-radius: 20rem;
     object-fit: cover;
 }
+
+.round_button {
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 0 3px black;
+    border-radius: 10rem;
+    padding: .4rem;
+}
+
+.round_button:hover{
+    color:dimgray;
+}
