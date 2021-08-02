@@ -211,4 +211,9 @@ header에서 조건문 분기한것 처럼
 
 3. 이미지가 로드 될 때마다 레이아웃 재배치
 !! magicgrid.js 에 javascirpt code 작성
-!!
+
+4. model 작성
+!! 1 대 다로 연결해 줄 수있는 Foreignkey
+!! model 생성 후 항상 마이그레이션 작업
+!! makemigration : 변화 측정
+   migrate : 변화를 DB schema에 실제 반영
