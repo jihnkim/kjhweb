@@ -207,4 +207,8 @@ header에서 조건문 분기한것 처럼
 2. 더미 이미지 넣어보기
 !! 로렘 픽섬 검색
 !! https://picsum .. url 추가
-!! list ㅗhtml
+!! list html 높이 속성 전부 삭제
+
+3. 이미지가 로드 될 때마다 레이아웃 재배치
+!! magicgrid.js 에 javascirpt code 작성
+!!
