@@ -190,5 +190,12 @@ header에서 조건문 분기한것 처럼
 !! Magic grid 검색 -- 확인
 !! 터미널에서 startapp articleapp
    항상 앱만들고 메인앱 인스톨앱 세팅, url path 추가
-   article app에 urls.py 생성
+   article app에 urls.py 생성 path 설정
+!! list.html 에 magicgrid 내용추가
+-----------------------------------------------------------------
+
+0802
+1. magic grid javascript 추가
+!! 복붙할 때 맨마지막줄 module.ex .. 삭제
+!! js 파일 html로 불러올 때 load static
 
