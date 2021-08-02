@@ -198,4 +198,13 @@ header에서 조건문 분기한것 처럼
 1. magic grid javascript 추가
 !! 복붙할 때 맨마지막줄 module.ex .. 삭제
 !! js 파일 html로 불러올 때 load static
+!! js magic grid 소스(js/magicgrid.js)
+   https://github.com/e-oj/Magic-Grid/blob/master/dist/magic-grid.cjs.js
+!! js fiddle 소스 (list.html)
+   https://jsfiddle.net/eolaojo/4pov0rdf/
+!! list.html 에 js 외부 소스 추가 시 <script src> 구문 사용
 
+2. 더미 이미지 넣어보기
+!! 로렘 픽섬 검색
+!! https://picsum .. url 추가
+!! list ㅗhtml
