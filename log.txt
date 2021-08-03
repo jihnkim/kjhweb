@@ -242,3 +242,9 @@ header에서 조건문 분기한것 처럼
 
 ** html 꿀팁 맨 바탕에 예를들어 img 누르고 tab하면 자동태그완성
    img.container 후 tab 누르면 class 생성
+
+3. update view 작성
+!! view 에서 동적으로 url 리턴
+!! self.object >> target_article
+!! detail html에서 update로 향하는 앵커태그 생성
+!! update 주소 라우팅 시 pk 값 항상 입력
