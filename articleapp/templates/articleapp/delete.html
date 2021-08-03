@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{# Load the tag library #}
+
+{% block content %}
+{# CSS 클래스 변경하고 추가했는데 디자인 변경이 안되면 브라우저 캐쉬 문제 #}
+{# 브라우저 개발자 탭에서 브라우저 캐쉬 disable check #}
+    <div class="text-center mw-500 m-auto">
+        <div class="m-5">
+            <h3>
+                Delete Article : {{ target_article.title }}
+            </h3>
+        </div>
+        <div>
+            <form action="{% url 'articleapp:delete' pk=target_article.pk %}"
+                  method="post">
+                {% csrf_token %}
+                <div style="font-family: 'Gochi Hand', cursive" class="m-5">
+                    <input type="submit" value="meow!"
+                           class="btn btn-danger rounded-pill px-5">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}

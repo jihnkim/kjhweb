@@ -248,3 +248,6 @@ header에서 조건문 분기한것 처럼
 !! self.object >> target_article
 !! detail html에서 update로 향하는 앵커태그 생성
 !! update 주소 라우팅 시 pk 값 항상 입력
+
+4. delete view 작성
+!!
