@@ -214,6 +214,21 @@ header에서 조건문 분기한것 처럼
 
 4. model 작성
 !! 1 대 다로 연결해 줄 수있는 Foreignkey
+   article과 user를 연결 1대다
+   OneToOne은 1대1
 !! model 생성 후 항상 마이그레이션 작업
 !! makemigration : 변화 측정
    migrate : 변화를 DB schema에 실제 반영
+
+5. form 생성
+-----------------------------------------------------------------
+
+0803
+1. view생성 ..
+!! view 생성 urls 수정 create html 생성
+!! html에서 enctype 꼭 넣어줘야함
+!! article create 페이지에서 제출시 DB에 정보가 쌓임
+!! 이때 DB에 foriegn 키가 null일 떄 서버에서 따로 처리를해줘야함
+   >>view 에서 form valid 추가
+   >>form.instance.writer = self.request.user
+   >>글쓴이가 누군지 확인
