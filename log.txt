@@ -232,3 +232,13 @@ header에서 조건문 분기한것 처럼
    >>view 에서 form valid 추가
    >>form.instance.writer = self.request.user
    >>글쓴이가 누군지 확인
+
+2. detail view 작성
+!! view 생성 urls 수정 detail html ..
+!! detail 은 urls path추가시 pk 값 꼭 작성
+!! target_article.writer.profile.nickname
+   >> writer 만 쓰게 되면 객체자체만 반환
+   >> 따라서 profile의 nickname을 가져와야함
+
+** html 꿀팁 맨 바탕에 예를들어 img 누르고 tab하면 자동태그완성
+   img.container 후 tab 누르면 class 생성
