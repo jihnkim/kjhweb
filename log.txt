@@ -258,3 +258,8 @@ header에서 조건문 분기한것 처럼
 !! 여지껏 했던 것처럼 데코레이터 생성
 !! create view에서 양식완성시 detail페이지로 success_url 되는게 자연스러움
 !! update와 delete 에서는 데코레이터 재정의
+
+2. detail page 디자인 수정
+!! detail.html, base.css 수정
+
+3.
