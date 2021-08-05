@@ -262,4 +262,5 @@ header에서 조건문 분기한것 처럼
 2. detail page 디자인 수정
 !! detail.html, base.css 수정
 
-3.
+3. List view 만들기(+pagination)
+!! view 생성 > url 수정 >
