@@ -5,12 +5,12 @@
 
     <style>
         .container div {
-          width: 280px;
-          box-shadow: gray;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 1rem;
+            width: 280px;
+            box-shadow: 0 0 0.5rem gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
             flex-direction: column;
         }
 
@@ -40,5 +40,15 @@
 
     <script src="{% static 'js/magicgrid.js' %}"></script>
 
+    <div class="text-center my-5">
+        <a href="{% url 'articleapp:create' %}"
+           class="btn btn-dark rounded-pill material-icons">
+            brush
+        </a>
+        <a href="{% url 'articleapp:create' %}"
+           class="btn btn-outline-dark rounded-pill px-5">
+            Create Article
+        </a>
+    </div>
 
 {% endblock %}
