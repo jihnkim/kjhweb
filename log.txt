@@ -280,3 +280,4 @@ header에서 조건문 분기한것 처럼
 !! detail에 댓글을 입력해야하는데 view에 form이 없다
 !! mixin 기능 이용(다중 상속)
 !! comment app 제작
+!! setting > 메인앱 url > 커맨트 앱 url > model > form
