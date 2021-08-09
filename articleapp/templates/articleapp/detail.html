@@ -23,17 +23,24 @@
                 {{ target_article.content }}
             </div>
             {% if target_article.writer == user %}
-            <div>
-                <a href="{% url 'articleapp:update' pk=target_article.pk %}"
-                   class="btn btn-success rounded-pill px-5">
-                    Update
-                </a>
-                <a href="{% url 'articleapp:delete' pk=target_article.pk %}"
-                   class="btn btn-danger rounded-pill px-5">
-                    Delete
-                </a>
-            </div>
+                <div>
+                    <a href="{% url 'articleapp:update' pk=target_article.pk %}"
+                       class="btn btn-success rounded-pill px-5">
+                        Update
+                    </a>
+                    <a href="{% url 'articleapp:delete' pk=target_article.pk %}"
+                       class="btn btn-danger rounded-pill px-5">
+                        Delete
+                    </a>
+                </div>
             {% endif %}
+            <hr>
+
+            <div class="text-center my-4">
+                {% include 'commentapp/create.html' %}
+            </div>
+
+
         </div>
     </div>
 

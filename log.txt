@@ -281,3 +281,4 @@ header에서 조건문 분기한것 처럼
 !! mixin 기능 이용(다중 상속)
 !! comment app 제작
 !! setting > 메인앱 url > 커맨트 앱 url > model > form
+!! 마이그래이션도
