@@ -31,7 +31,7 @@
                     <img src="{{ article.image.url }}"
                          alt="">
                 </a>
-            {# <div>{{ article.title }}</div> #}
+                {# <div>{{ article.title }}</div> #}
             </div>
 
         {% endfor %}
@@ -39,6 +39,8 @@
     </div>
 
     <script src="{% static 'js/magicgrid.js' %}"></script>
+
+    {% include 'snippets/pagination.html' %}
 
     <div class="text-center my-5">
         <a href="{% url 'articleapp:create' %}"

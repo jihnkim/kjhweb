@@ -55,4 +55,4 @@ class ArticleListView(ListView):
     model = Article
     context_object_name = 'article_list' # 객체들의 리스트
     template_name = 'articleapp/list.html'
-    paginate_by = 20
+    paginate_by = 1
