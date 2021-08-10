@@ -300,3 +300,8 @@ header에서 조건문 분기한것 처럼
 2. CommentDeleteView 작성
 !! view, url, html 만들기
 
+3. 댓글시각화
+!! article detail.html에서 작성
+!! article의 related_name이 comment이므로 comment로 접근
+!! span tag 2개 (이름, 날짜) 밑 div tag에 comment 출력
+!! css에 클래스 저장
