@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="text-center mw-500 m-auto">
+        <div class="m-5">
+            <h3 style="font-family: 'Gochi Hand', cursive">Delete Comment</h3>
+        </div>
+        <div>
+            <form action="{% url 'commentapp:delete' pk=target_comment.pk %}" method="post">
+                {% csrf_token %}
+                <div style="font-family: 'Gochi Hand', cursive" class="m-5">
+                    <input type="submit" value="meow :("
+                           class="btn btn-danger rounded-pill px-5">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}
