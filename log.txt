@@ -278,7 +278,21 @@ header에서 조건문 분기한것 처럼
 !! create view와 detail view 의 차이
 >> no object <--> no form
 !! detail에 댓글을 입력해야하는데 view에 form이 없다
-!! mixin 기능 이용(다중 상속)
+!! mixin 기능 이용(article detail view에서 다중 상속)
 !! comment app 제작
 !! setting > 메인앱 url > 커맨트 앱 url > model > form
 !! 마이그래이션도
+
+-----------------------------------------------------------------
+
+0810
+1. 서버에서 처리해야할 사항 (article, writer)
+!! comment_app comment DB
+!! commentcreateview에 form valid 추가
+   request 보내는 유저가 instance의 writer
+   article의 경우 create.html문에서 식별하기위한 input tag 생성
+   이 때 value가 target_article.pk로 설정될 수 있는 이유는
+   articleapp detail.html에서 include를 사용했으므로 똑같이 사용가능
+   * 아직 client 측에서 조작이 가능하다 (pk값 f12로 변경 가능)
+
+** 에러 팁 : 로그인되어있지 않을 때 종종 발생 : simplelazyobject
