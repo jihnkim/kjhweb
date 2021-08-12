@@ -322,3 +322,8 @@ header에서 조건문 분기한것 처럼
 !! 메인프로젝트 디렉토리에 exe 파일 다운 후 추가
    터미널에서 ngrok http 포트번호  입력
    settings 에서 allowed_hosts 에 '*' 추가
+!! Responsive Design
+   head.html에 메타태그 추가
+   모바일에서 두개아티클이 출력되게 조정
+   >> magic grid.js gutter: 12로 수정
+   >> list.html 컨테이너 박스 수정
