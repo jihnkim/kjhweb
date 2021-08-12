@@ -43,7 +43,7 @@
                     <div class="comment_box">
                         <div>
                             <span class="NNS_B"
-                                    style="font-size: 1.3rem">{{ comment.writer.profile.nickname }}</span>
+                                  style="font-size: 1.3rem">{{ comment.writer.profile.nickname }}</span>
                             <span>{{ comment.created_at }}</span>
                         </div>
                         <div>
@@ -51,6 +51,14 @@
                                 {{ comment.content }}
                             </p>
                         </div>
+                        {% if comment.writer == user %}
+                            <div style="text-align: right">
+                                <a href="{% url 'commentapp:delete' pk=comment.pk %}"
+                                   class="btn btn-danger rounded-pill px-5">
+                                    글 삭제
+                                </a>
+                            </div>
+                        {% endif %}
                     </div>
 
                 {% endfor %}
