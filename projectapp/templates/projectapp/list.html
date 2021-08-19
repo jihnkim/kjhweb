@@ -11,9 +11,6 @@
         }
 
         .container div {
-            width: 45%;
-            max-width: 250px;
-            box-shadow: 0 0 0.5rem gray;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,7 +19,9 @@
         }
 
         .container img {
-            width: 100%;
+            width: 7rem;
+            height: 7rem;
+            object-fit: cover;
             border-radius: 1rem;
         }
 
@@ -38,7 +37,7 @@
                     <img src="{{ project.image.url }}"
                          alt="">
                 </a>
-                 <span class="m-2 NNS_B">{{ project.name }}</span>
+                 <span class="m-2 NNS_B">{{ project.name | truncatechars:10 }}</span>
             </div>
 
         {% endfor %}
@@ -50,7 +49,7 @@
     {% include 'snippets/pagination.html' %}
 
     <div class="text-center my-5">
-        <a href="{% url 'articleapp:create' %}"
+        <a href="{% url 'projectapp:create' %}"
            class="btn btn-outline-dark rounded-pill px-5">
             Create Project
         </a>
