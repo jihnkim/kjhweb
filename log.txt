@@ -360,3 +360,6 @@ header에서 조건문 분기한것 처럼
 !! project detail view 수정
    MultipleObjectMixin >> 여러개의 객체를 다룰 수 있게함
    paginate_by, 등 등 여러 객체를 하나의 뷰에서 사용가능 (다중 상속)
+
+3. 구독 앱 만들기
+!!
