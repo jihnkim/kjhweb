@@ -350,7 +350,13 @@ header에서 조건문 분기한것 처럼
 1. article과 project 연결
 !! articleapp 애서 model 수정
 !! 항상 모델을 수정하고 나면 **마이그래이션**
+   만약 웹브라우저에서 column 오류 시 마이그레이션 안한거임
 !! 그다음 form 수정
 !! article 생성 시 project 이름을 그대로 출력하기위해
        def __str__(self):
         return f'{self.name}' 사용
+
+2. 게시판 밑에 articles 보이게 하기
+!! project detail view 수정
+   MultipleObjectMixin >> 여러개의 객체를 다룰 수 있게함
+   paginate_by, 등 등 여러 객체를 하나의 뷰에서 사용가능 (다중 상속)
