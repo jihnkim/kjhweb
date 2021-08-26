@@ -381,4 +381,7 @@ header에서 조건문 분기한것 처럼
 
 0826
 1. user 요청에 따른 반응 (Likesystem)
-!! Django message 기능
+!! Django message 기능 공식문서 확인
+!! base.html에 출력
+!! message 태그에 따른 색깔 변화 -> 하드코딩 X
+   세팅에서 태그 수정
