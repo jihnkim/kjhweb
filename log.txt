@@ -387,3 +387,97 @@ header에서 조건문 분기한것 처럼
    세팅에서 태그 수정
 
 ** 2번째거 안했음 하고 시작~
+
+0830
+-------------------------------------------------------------
+vps virtual private server
+
+AWS 가입 했음
+-------------------------------------------------------------
+
+0831
+
+aws 사용 방법
+1. aws 콘솔로그인 후 좌측 상단 서비스라는 드랍다운 메뉴 클릭
+
+2. EC2 들어가서 인스턴스 시작 후 Ubuntu Server 20.04 LTS (HVM), SSD Volume Type
+클릭
+
+3. 단계 따라가면서 시작
+
+4. 키페어 설정 ? 포트를 열어놧는데 이 포트의 소유주임을 증명하는 키(즉, 집 키 같은 개념)
+
+5. 인스턴스 생성 후 요약 페이지 보기
+   거기서 퍼블릭 ipv4 주소로 접근해야함
+
+6. 터미널에서 ssh -i kjhweb.pem ubuntu@3.38.115.126 입력(퍼블릭IP)
+   인증하는 과정임
+
+**gcp
+1. 같은 방법으로 콘솔로그인 (GCP)
+
+2. 컴퓨트엔진에서 VM 인스턴스 생성
+
+3. ubuntu 로 생성
+
+gcp, aws 차이?
+> gcp 는 ssh key를 안받는다
+  자체 보안프로토콜인 os login 사용
+
+자체적으로 새로운 키를 생성, 등록, 요청
+>> 터미널에서 ssh-keygen -t rsa -b 4096 -f kjhweb_gcp -C "sysanal1697@likelion.org"
+>> 등록은 vm instance(gcp console)에서 메타데이터에서 ssh키 추가
+>> 요청은 ssh -i kghweb_gcp sysanal1697@외부IP
+
+** gcp는 2번째 프로젝트에 햇음
+
+--------------------------------------------
+0902
+
+도커?
+도커의 가상화
+>> 여러 os 위에 (다양한 종류에 상관없이) Linux, window 등 동일한 환경을 올리고 싶다
+>> 도커는 성능 저하가 없음 기존 native에 비해
+개발, 빌드, 유지 등등 모든것이 빨라짐
+
+도커없이 배포한다면?
+서버를 빌릴 때 마다 할게 많음. . .
+
+도커를 사용한다면
+설정들을 이미지화해서 저장해 둠 즉, 어느 플랫폼에서든 불러와 똑같이 사용가능
+이미지 --> class, 컨테이너 --> instance 와 비슷
+
+도커의 설치
+도커 공식문서에서 명령어 받을수 잇음
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+sudo? --> superuser do!! 관리자 권한으로 실행(root 계정이 아닐 때)
+apt-get update ?
+리눅스 환경에서는 외부라이브러리를 사용하는데 외부 라이브러리에 어떤 것이 설치 가능한지 업데이트
+apt-get install?
+명령어 밑에 나열된 프로그램들을 설치한다
+
+portainer.io는
+GUI 담당
+(CLI와 반대개념)
+
+portainer 설치과정
+aws 부터
+install portainer 검색
+docker 문서 명령어 두개 입력하는데 sudo 사용
+
+---------------------------------------------------------------
+0906
+GCP portainer도 똑같이 만들고
+방화벽 규칙 생성
+-- 트래픽 방향 수신?? = aws 인바운드규칙
+   서버에서 받는 요청
+
+도커 허브에서 원하는 소프트웨어 검색 후 pull image
+지금은 nginx 쓸거임
+nginx container 만들었으면 aws에서 인스턴스 > 보안 > 보안그룹
+방화벽 규칙(인바운드 규칙 수정)
+
+pip freeze > requirements.txt
+
+
