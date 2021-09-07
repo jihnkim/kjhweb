@@ -479,5 +479,5 @@ nginx container 만들었으면 aws에서 인스턴스 > 보안 > 보안그룹
 방화벽 규칙(인바운드 규칙 수정)
 
 pip freeze > requirements.txt
-
+설치된 패키지를 그대로 얼려서 txt로 저장한다는 뜻
 
